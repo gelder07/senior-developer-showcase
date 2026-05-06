@@ -2,6 +2,8 @@ import type { Lang } from "./translations";
 import coverCargotrans from "@/assets/cover-cargotrans.png";
 import coverWellpro from "@/assets/cover-wellpro.png";
 import logoLafise from "@/assets/logo-lafise.png";
+import logoGbm from "@/assets/logo-gbm.jpg";
+import logoClnsa from "@/assets/logo-clnsa.png";
 
 export interface ExperienceItem {
   company: string;
@@ -27,6 +29,7 @@ export const experiences: ExperienceItem[] = [
     },
     stack: ["React", "Angular", "Redux", "Zustand", "React Native", "DigitalOcean"],
     group: "companies",
+    logo: logoGbm,
   },
   {
     company: "Compañía Licorera de Nicaragua",
@@ -39,6 +42,7 @@ export const experiences: ExperienceItem[] = [
     },
     stack: ["React", "Angular", "Laravel", "MySQL", "Nginx", "DigitalOcean"],
     group: "companies",
+    logo: logoClnsa,
   },
   {
     company: "LAFISE",
@@ -155,6 +159,16 @@ export const projects: Project[] = [
     tag: { es: "RRHH", en: "HR" },
     privateProject: true,
   },
+  {
+    title: "Fachadas Modernas",
+    description: {
+      es: "Sistema integral de inventario, facturación y gestión comercial con dashboards y reportes estratégicos.",
+      en: "Integrated inventory, billing and commercial management system with dashboards and strategic reports.",
+    },
+    stack: ["React", "Laravel", "MySQL", "Dashboards"],
+    tag: { es: "ERP", en: "ERP" },
+    privateProject: true,
+  },
 ];
 
 export const stack: Record<string, string[]> = {
@@ -166,10 +180,10 @@ export const stack: Record<string, string[]> = {
   other: ["GraphQL", "REST APIs", "SOLID", "SCRUM", "Git"],
 };
 
-export const trustCompanies: { name: string; topCompany?: boolean }[] = [
-  { name: "GBM", topCompany: true },
-  { name: "Compañía Licorera de Nicaragua", topCompany: true },
-  { name: "LAFISE", topCompany: true },
+export const trustCompanies: { name: string; topCompany?: boolean; logo?: string }[] = [
+  { name: "GBM", topCompany: true, logo: logoGbm },
+  { name: "Compañía Licorera de Nicaragua", topCompany: true, logo: logoClnsa },
+  { name: "LAFISE", topCompany: true, logo: logoLafise },
 ];
 
 export const LINKEDIN_URL =

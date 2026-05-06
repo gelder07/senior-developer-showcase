@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Moon, Sun, Languages } from "lucide-react";
+import { Moon, Sun, Languages, Linkedin } from "lucide-react";
+import { LINKEDIN_URL } from "@/i18n/data";
 import { useAppState } from "@/hooks/use-app-state";
 import { cn } from "@/lib/utils";
 

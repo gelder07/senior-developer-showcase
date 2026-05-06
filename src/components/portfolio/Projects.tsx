@@ -4,6 +4,7 @@ import { useAppState } from "@/hooks/use-app-state";
 import { projects } from "@/i18n/data";
 import { SectionHeading } from "./SectionHeading";
 import { cn } from "@/lib/utils";
+import projectPlaceholder from "@/assets/project-placeholder.jpg";
 
 const sizeClass: Record<string, string> = {
   lg: "md:col-span-2 md:row-span-2 min-h-[420px]",
@@ -50,6 +51,19 @@ export function Projects() {
                     isLink && "cursor-pointer",
                   )}
                 >
+                  <img
+                    src={projectPlaceholder}
+                    alt=""
+                    aria-hidden
+                    loading="lazy"
+                    width={1280}
+                    height={800}
+                    className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                  />
+                  <div
+                    aria-hidden
+                    className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/60"
+                  />
                   <div
                     aria-hidden
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"

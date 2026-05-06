@@ -135,6 +135,6 @@ export const translations = {
       rights: "Designed and built by Gelder Gómez",
     },
   },
-} as const;
+};
 
-export type Translations = typeof translations.es;
+export type Translations = (typeof translations)["es"];

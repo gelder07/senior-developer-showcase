@@ -1,0 +1,81 @@
+import { useEffect, useState } from "react";
+import { Moon, Sun, Languages } from "lucide-react";
+import { useAppState } from "@/hooks/use-app-state";
+import { cn } from "@/lib/utils";
+
+export function Header() {
+  const { t, theme, toggleTheme, lang, toggleLang } = useAppState();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const links = [
+    { href: "#about", label: t.nav.about },
+    { href: "#experience", label: t.nav.experience },
+    { href: "#projects", label: t.nav.projects },
+    { href: "#stack", label: t.nav.stack },
+    { href: "#contact", label: t.nav.contact },
+  ];
+
+  return (
+    <header
+      className={cn(
+        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
+        scrolled
+          ? "backdrop-blur-xl bg-background/70 border-b border-border/60"
+          : "bg-transparent",
+      )}
+    >
+      <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
+        <a
+          href="#top"
+          className="font-serif text-2xl tracking-tight text-foreground hover:text-primary transition-colors"
+          aria-label="Gelder Gómez — Home"
+        >
+          GG<span className="text-primary">.</span>
+        </a>
+
+        <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+          {links.map((l) => (
+            <a
+              key={l.href}
+              href={l.href}
+              className="hover:text-foreground transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={toggleLang}
+            className="h-9 px-3 rounded-full border border-border/70 hover:border-primary/60 hover:text-primary transition-colors text-xs font-medium uppercase tracking-wider flex items-center gap-1.5"
+            aria-label="Toggle language"
+          >
+            <Languages className="size-3.5" />
+            {lang.toUpperCase()}
+          </button>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="h-9 w-9 rounded-full border border-border/70 hover:border-primary/60 hover:text-primary transition-colors flex items-center justify-center"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? (
+              <Sun className="size-4" />
+            ) : (
+              <Moon className="size-4" />
+            )}
+          </button>
+        </div>
+      </div>
+    </header>
+  );
+}

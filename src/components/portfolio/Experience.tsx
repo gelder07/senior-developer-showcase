@@ -64,7 +64,24 @@ export function Experience() {
               transition={{ duration: 0.35 }}
               className="min-h-[360px]"
             >
+              {exp.cover && (
+                <div className="mb-6 overflow-hidden rounded-xl border border-border aspect-[16/9] bg-muted">
+                  <img
+                    src={exp.cover}
+                    alt={`${exp.company} cover`}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              )}
+
               <div className="flex flex-wrap items-center gap-3 mb-2">
+                <span
+                  aria-hidden
+                  className="inline-flex items-center justify-center size-10 rounded-lg bg-primary/10 border border-primary/20 text-primary font-serif text-lg shrink-0"
+                >
+                  {exp.company.replace(/^(Grupo Jaga · )/, "").charAt(0)}
+                </span>
                 <h3 className="font-serif text-3xl md:text-4xl text-foreground tracking-tight">
                   {exp.role[lang]}{" "}
                   <span className="text-primary">@ {exp.company}</span>

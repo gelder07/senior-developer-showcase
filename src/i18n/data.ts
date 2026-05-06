@@ -103,10 +103,10 @@ export interface Project {
   title: string;
   description: { es: string; en: string };
   stack: string[];
-  size: "lg" | "md-h" | "md-v" | "sm";
   tag: { es: string; en: string };
   url?: string;
   privateProject?: boolean;
+  cover?: string;
 }
 
 export const projects: Project[] = [
@@ -117,9 +117,9 @@ export const projects: Project[] = [
       en: "Logistics platform redesigned to strengthen the operator's digital presence and conversion.",
     },
     stack: ["Next.js", "React", "UI/UX"],
-    size: "md-h",
     tag: { es: "Logística", en: "Logistics" },
     url: "https://www.cargotrans.com.ni",
+    cover: coverCargotrans,
   },
   {
     title: "Wellpro",
@@ -128,9 +128,9 @@ export const projects: Project[] = [
       en: "Home medical equipment platform with a dynamic catalog and clear UX.",
     },
     stack: ["React", "Next.js"],
-    size: "md-v",
     tag: { es: "Healthcare", en: "Healthcare" },
     url: "https://wellpro.es",
+    cover: coverWellpro,
   },
   {
     title: "Ogilvy / Target HR",
@@ -139,7 +139,6 @@ export const projects: Project[] = [
       en: "Internal HR system with approval workflows, states and notifications.",
     },
     stack: ["React", "Django REST", "PostgreSQL", "AWS"],
-    size: "md-h",
     tag: { es: "RRHH", en: "HR" },
     privateProject: true,
   },

@@ -81,17 +81,6 @@ export const experiences: ExperienceItem[] = [
     group: "freelance",
   },
   {
-    company: "SmartLaw",
-    role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
-    period: "2022 — 2023",
-    description: {
-      es: "Como Desarrollador Full Stack en SmartLaw, desarrollé desde cero una plataforma SaaS orientada a la gestión legal, resolviendo la necesidad de centralizar documentos, pagos y suscripciones en un solo sistema escalable. Diseñé un frontend en React enfocado en experiencia de usuario para flujos complejos y construí un backend robusto en .NET Core siguiendo principios SOLID, permitiendo una arquitectura mantenible, segura y preparada para crecimiento futuro.",
-      en: "As a Full Stack Developer at SmartLaw, I built from scratch a SaaS platform for legal management, solving the need to centralize documents, payments and subscriptions in a single scalable system. I designed a React frontend focused on UX for complex flows and built a robust .NET Core backend following SOLID principles, delivering a maintainable, secure architecture ready for future growth.",
-    },
-    stack: ["React", "Redux Toolkit", ".NET Core", "AWS", "Tailwind"],
-    group: "freelance",
-  },
-  {
     company: "Ogilvy / Target",
     role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
     period: "2021",
@@ -115,17 +104,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    title: "SmartLaw",
-    description: {
-      es: "Plataforma legal SaaS construida desde cero con pagos, suscripciones y gestión documental para flujos complejos.",
-      en: "Legal SaaS platform built from scratch with payments, subscriptions and document management for complex workflows.",
-    },
-    stack: ["React", ".NET Core", "AWS", "Stripe"],
-    size: "lg",
-    tag: { es: "SaaS Legal", en: "Legal SaaS" },
-    url: "https://smartlawweb.com",
-  },
   {
     title: "Cargotrans",
     description: {

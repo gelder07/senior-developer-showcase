@@ -76,7 +76,7 @@ export function Hero() {
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <a
-            href="#projects"
+            href="#experience"
             className="group inline-flex items-center gap-2 h-12 px-6 rounded-full bg-primary text-primary-foreground font-medium hover:opacity-90 transition-opacity"
           >
             {t.hero.ctaProjects}

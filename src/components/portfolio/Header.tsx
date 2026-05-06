@@ -26,7 +26,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 inset-x-0 z-50 transition-all duration-300",
+        "fixed top-0 inset-x-0 z-50 transition-all duration-300 animate-fade-in",
         scrolled
           ? "backdrop-blur-xl bg-background/70 border-b border-border/60"
           : "bg-transparent",
@@ -46,7 +46,7 @@ export function Header() {
             <a
               key={l.href}
               href={l.href}
-              className="hover:text-foreground transition-colors"
+              className="story-link hover:text-foreground transition-colors"
             >
               {l.label}
             </a>

@@ -1,6 +1,7 @@
 import type { Lang } from "./translations";
 import coverCargotrans from "@/assets/cover-cargotrans.png";
 import coverWellpro from "@/assets/cover-wellpro.png";
+import logoLafise from "@/assets/logo-lafise.png";
 
 export interface ExperienceItem {
   company: string;
@@ -50,6 +51,7 @@ export const experiences: ExperienceItem[] = [
     },
     stack: ["React", "Redux", "Django", "Tailwind"],
     group: "companies",
+    logo: logoLafise,
   },
   {
     company: "Contollo",
@@ -95,6 +97,17 @@ export const experiences: ExperienceItem[] = [
       en: "On freelance projects for Ogilvy and Target, I built an HR system designed to replace manual processes and improve operational traceability. I implemented complex workflows for approvals, states and notifications using React and Django REST, and automated deployments through pipelines with AWS and Zappa. This reduced repetitive tasks, improved team efficiency and provided a scalable, centralized platform for internal management.",
     },
     stack: ["React", "Django REST", "PostgreSQL", "AWS"],
+    group: "freelance",
+  },
+  {
+    company: "Fachadas Modernas",
+    role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
+    period: "2023",
+    description: {
+      es: "Desarrollé desde cero un sistema integral de inventario, facturación y gestión comercial diseñado para optimizar las operaciones internas de una empresa de arquitectura con múltiples flujos manuales y poca trazabilidad de información. Analicé los procesos del negocio y construí una plataforma capaz de centralizar inventario, cotizaciones, compras, clientes, proveedores y facturación en un solo entorno, permitiendo un control mucho más preciso de las operaciones. Implementé funcionalidades avanzadas como generación automática de códigos de productos, consulta inteligente de artículos relacionados, dashboards de métricas totalmente personalizables y reportes estratégicos como kardex, entradas, salidas y control de compras. El sistema permitió reducir errores operativos, mejorar la toma de decisiones y brindar una visión mucho más clara y organizada del negocio en tiempo real.",
+      en: "I built from scratch a complete inventory, billing and commercial management system designed to optimize the internal operations of an architecture company with multiple manual flows and limited information traceability. I analyzed the business processes and built a platform capable of centralizing inventory, quotes, purchases, customers, suppliers and billing in a single environment, enabling much more precise operational control. I implemented advanced features such as automatic product code generation, smart related-item lookup, fully customizable metrics dashboards and strategic reports like kardex, inflows, outflows and purchase control. The system reduced operational errors, improved decision-making and provided a clearer, more organized real-time view of the business.",
+    },
+    stack: ["React", "Laravel", "MySQL", "Dashboards"],
     group: "freelance",
   },
 ];

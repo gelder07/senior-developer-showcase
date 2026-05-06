@@ -32,6 +32,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
+                whileHover={{ y: -4 }}
                 className="h-full"
               >
                 <Wrapper

@@ -3,7 +3,9 @@ import { trustCompanies } from "@/i18n/data";
 
 export function TrustBar() {
   const { t } = useAppState();
-  const top = trustCompanies.filter((c) => c.topCompany && c.logo);
+  const base = trustCompanies.filter((c) => c.topCompany && c.logo);
+  // Repeat enough times so each set is wider than the viewport (seamless loop)
+  const top = Array.from({ length: 6 }, () => base).flat();
 
   return (
     <section

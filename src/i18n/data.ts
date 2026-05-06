@@ -1,6 +1,7 @@
 import type { Lang } from "./translations";
 import coverCargotrans from "@/assets/cover-cargotrans.png";
 import coverWellpro from "@/assets/cover-wellpro.png";
+import logoLafise from "@/assets/logo-lafise.png";
 
 export interface ExperienceItem {
   company: string;
@@ -50,6 +51,7 @@ export const experiences: ExperienceItem[] = [
     },
     stack: ["React", "Redux", "Django", "Tailwind"],
     group: "companies",
+    logo: logoLafise,
   },
   {
     company: "Contollo",

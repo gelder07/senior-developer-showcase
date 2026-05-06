@@ -11,8 +11,9 @@ export const translations = {
     },
     hero: {
       greeting: "Hola, soy Gelder.",
-      title: "Construyo productos web y móviles que",
-      titleAccent: "escalan",
+      title: "Diseño y programo cosas",
+      titleAccent: "bellamente simples",
+      titleSuffix: ", y amo lo que hago.",
       subtitle:
         "Full Stack & Mobile Developer · +6 años · React, React Native, Node, .NET, AWS",
       location: "Managua, Nicaragua — disponible para proyectos remotos",
@@ -20,6 +21,12 @@ export const translations = {
       ctaContact: "Contactar",
       scroll: "Desliza",
     },
+    trust: {
+      title: "Experiencia en algunas de las empresas más importantes de Nicaragua",
+    },
+    topCompany: "Top Nicaragua",
+    topCompanyNote: "Una de las empresas más importantes de Nicaragua",
+    nda: "Sistema privado · NDA",
     about: {
       label: "Sobre mí",
       title: "Senior Developer enfocado en impacto real.",
@@ -78,8 +85,9 @@ export const translations = {
     },
     hero: {
       greeting: "Hi, I'm Gelder.",
-      title: "I build web and mobile products that",
-      titleAccent: "scale",
+      title: "I design and code",
+      titleAccent: "beautifully simple things",
+      titleSuffix: ", and I love what I do.",
       subtitle:
         "Full Stack & Mobile Developer · 6+ years · React, React Native, Node, .NET, AWS",
       location: "Managua, Nicaragua — available for remote work worldwide",
@@ -87,6 +95,12 @@ export const translations = {
       ctaContact: "Get in touch",
       scroll: "Scroll",
     },
+    trust: {
+      title: "Experience at some of Nicaragua's leading companies",
+    },
+    topCompany: "Top Nicaragua",
+    topCompanyNote: "One of Nicaragua's leading companies",
+    nda: "Private system · NDA",
     about: {
       label: "About",
       title: "Senior developer focused on real impact.",

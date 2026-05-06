@@ -46,7 +46,8 @@ export function Hero() {
           className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.02] tracking-tight text-foreground max-w-5xl"
         >
           {t.hero.title}{" "}
-          <span className="italic text-primary">{t.hero.titleAccent}</span>.
+          <span className="italic text-primary">{t.hero.titleAccent}</span>
+          {t.hero.titleSuffix}
         </motion.h1>
 
         <motion.p

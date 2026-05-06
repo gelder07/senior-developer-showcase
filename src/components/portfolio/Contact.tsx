@@ -2,11 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Copy, Check, Mail, MessageCircle, Github, Linkedin } from "lucide-react";
 import { useAppState } from "@/hooks/use-app-state";
-
-const EMAIL = "geldergomez04@gmail.com";
-const WHATSAPP = "https://wa.me/50581867161";
-const GITHUB = "#";
-const LINKEDIN = "#";
+import { EMAIL, WHATSAPP_URL, LINKEDIN_URL, GITHUB_URL } from "@/i18n/data";
 
 export function Contact() {
   const { t } = useAppState();
@@ -26,9 +22,9 @@ export function Contact() {
       label: "Email",
       icon: Mail,
     },
-    { href: WHATSAPP, label: "WhatsApp", icon: MessageCircle, external: true },
-    { href: LINKEDIN, label: "LinkedIn", icon: Linkedin, external: true },
-    { href: GITHUB, label: "GitHub", icon: Github, external: true },
+    { href: WHATSAPP_URL, label: "WhatsApp", icon: MessageCircle, external: true },
+    { href: LINKEDIN_URL, label: "LinkedIn", icon: Linkedin, external: true },
+    { href: GITHUB_URL, label: "GitHub", icon: Github, external: true },
   ];
 
   return (

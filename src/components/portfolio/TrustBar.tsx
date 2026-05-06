@@ -31,17 +31,26 @@ export function TrustBar() {
           {items.map((c, i) => (
             <div
               key={`${c.name}-${i}`}
-              className="flex items-center gap-3 shrink-0 text-foreground/60 hover:text-primary transition-colors"
+              className="flex items-center gap-3 shrink-0 text-foreground/70 hover:text-primary transition-colors"
             >
               {c.topCompany && (
                 <Award className="size-4 text-primary shrink-0" />
               )}
-              <span
-                className="font-serif text-2xl md:text-3xl tracking-tight whitespace-nowrap"
-                style={{ fontVariant: "small-caps" }}
-              >
-                {c.name}
-              </span>
+              {c.logo ? (
+                <img
+                  src={c.logo}
+                  alt={`${c.name} logo`}
+                  className="h-10 md:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
+              ) : (
+                <span
+                  className="font-serif text-2xl md:text-3xl tracking-tight whitespace-nowrap"
+                  style={{ fontVariant: "small-caps" }}
+                >
+                  {c.name}
+                </span>
+              )}
             </div>
           ))}
         </div>

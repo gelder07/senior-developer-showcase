@@ -4,7 +4,8 @@ import { trustCompanies } from "@/i18n/data";
 
 export function TrustBar() {
   const { t } = useAppState();
-  const items = [...trustCompanies, ...trustCompanies]; // duplicate for seamless loop
+  const top = trustCompanies.filter((c) => c.topCompany);
+  const items = [...top, ...top, ...top, ...top]; // duplicate for seamless loop
 
   return (
     <section

@@ -39,13 +39,13 @@ export function Contact() {
         }}
       />
 
-      <div className="mx-auto max-w-4xl text-center relative">
+      <div className="mx-auto max-w-5xl text-center relative">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mx-auto mb-8 size-32 md:size-36 rounded-full overflow-hidden border border-border ring-4 ring-primary/10 shadow-lg"
+          className="mx-auto mb-8 size-32 md:size-64 rounded-full overflow-hidden border border-border ring-4 ring-primary/10 shadow-lg"
         >
           <img
             src={profilePhoto}

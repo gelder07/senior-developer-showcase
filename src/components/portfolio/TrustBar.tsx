@@ -13,7 +13,7 @@ export function TrustBar() {
       className="py-16 border-y border-border/60 bg-surface/30 overflow-hidden"
     >
       <div className="mx-auto max-w-6xl px-6">
-        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground text-center mb-10">
+        <p className="font-mono text-xl uppercase tracking-[0.25em] text-muted-foreground text-center mb-10 ">
           {t.trust.title}
         </p>
       </div>

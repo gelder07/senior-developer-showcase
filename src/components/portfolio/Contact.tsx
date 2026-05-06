@@ -2,11 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Copy, Check, Mail, MessageCircle, Github, Linkedin } from "lucide-react";
 import { useAppState } from "@/hooks/use-app-state";
-
-const EMAIL = "geldergomez04@gmail.com";
-const WHATSAPP = "https://wa.me/50581867161";
-const GITHUB = "#";
-const LINKEDIN = "#";
+import { EMAIL, WHATSAPP_URL, LINKEDIN_URL, GITHUB_URL } from "@/i18n/data";
 
 export function Contact() {
   const { t } = useAppState();

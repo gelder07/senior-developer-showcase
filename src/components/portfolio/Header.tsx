@@ -54,6 +54,15 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:flex h-9 w-9 rounded-full border border-border/70 hover:border-primary/60 hover:text-primary transition-colors items-center justify-center"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="size-4" />
+          </a>
           <button
             type="button"
             onClick={toggleLang}

@@ -1,11 +1,9 @@
-import { Award } from "lucide-react";
 import { useAppState } from "@/hooks/use-app-state";
 import { trustCompanies } from "@/i18n/data";
 
 export function TrustBar() {
   const { t } = useAppState();
-  const top = trustCompanies.filter((c) => c.topCompany);
-  const items = [...top, ...top, ...top, ...top]; // duplicate for seamless loop
+  const top = trustCompanies.filter((c) => c.topCompany && c.logo);
 
   return (
     <section
@@ -19,7 +17,7 @@ export function TrustBar() {
       </div>
 
       <div
-        className="relative w-full overflow-hidden marquee-mask"
+        className="relative w-full overflow-hidden"
         style={{
           maskImage:
             "linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)",
@@ -27,30 +25,22 @@ export function TrustBar() {
             "linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)",
         }}
       >
-        <div className="flex gap-16 w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
-          {items.map((c, i) => (
-            <div
-              key={`${c.name}-${i}`}
-              className="flex items-center gap-3 shrink-0 text-foreground/70 hover:text-primary transition-colors"
-            >
-              {c.topCompany && (
-                <Award className="size-4 text-primary shrink-0" />
-              )}
-              {c.logo ? (
-                <img
-                  src={c.logo}
-                  alt={`${c.name} logo`}
-                  className="h-10 md:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
-                  loading="lazy"
-                />
-              ) : (
-                <span
-                  className="font-serif text-2xl md:text-3xl tracking-tight whitespace-nowrap"
-                  style={{ fontVariant: "small-caps" }}
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
+          {[0, 1].map((set) => (
+            <div key={set} className="flex gap-16 pr-16 shrink-0" aria-hidden={set === 1}>
+              {top.map((c, i) => (
+                <div
+                  key={`${set}-${c.name}-${i}`}
+                  className="flex items-center shrink-0"
                 >
-                  {c.name}
-                </span>
-              )}
+                  <img
+                    src={c.logo}
+                    alt={`${c.name} logo`}
+                    className="h-10 md:h-12 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -62,9 +52,10 @@ export function TrustBar() {
           to { transform: translateX(-50%); }
         }
         .animate-marquee {
-          animation: marquee 40s linear infinite;
+          animation: marquee 30s linear infinite;
         }
       `}</style>
     </section>
   );
 }
+

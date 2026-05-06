@@ -4,14 +4,6 @@ import { useAppState } from "@/hooks/use-app-state";
 import { projects } from "@/i18n/data";
 import { SectionHeading } from "./SectionHeading";
 import { cn } from "@/lib/utils";
-import projectPlaceholder from "@/assets/project-placeholder.jpg";
-
-const sizeClass: Record<string, string> = {
-  lg: "md:col-span-2 md:row-span-2 min-h-[420px]",
-  "md-h": "md:col-span-2 min-h-[240px]",
-  "md-v": "md:row-span-2 min-h-[420px]",
-  sm: "min-h-[240px]",
-};
 
 export function Projects() {
   const { t, lang } = useAppState();
@@ -21,12 +13,10 @@ export function Projects() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading label={t.projects.label} title={t.projects.title} />
 
-        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[200px] gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => {
             const isLink = Boolean(p.url);
-            const Wrapper = (isLink ? "a" : "article") as
-              | "a"
-              | "article";
+            const Wrapper = (isLink ? "a" : "article") as "a" | "article";
             const wrapperProps = isLink
               ? {
                   href: p.url,
@@ -42,71 +32,63 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
-                className={cn(sizeClass[p.size])}
+                className="h-full"
               >
                 <Wrapper
                   {...wrapperProps}
                   className={cn(
-                    "group relative overflow-hidden rounded-2xl border border-border bg-card p-6 md:p-8 hover:border-primary/40 transition-all duration-300 flex flex-col justify-between h-full",
+                    "group relative overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/40 transition-all duration-300 flex flex-col h-full",
                     isLink && "cursor-pointer",
                   )}
                 >
-                  <img
-                    src={projectPlaceholder}
-                    alt=""
-                    aria-hidden
-                    loading="lazy"
-                    width={1280}
-                    height={800}
-                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-card via-card/70 to-card/30"
-                  />
-                  <div
-                    aria-hidden
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                    style={{
-                      background:
-                        "radial-gradient(600px circle at 50% 50%, color-mix(in oklab, var(--primary) 12%, transparent), transparent 40%)",
-                    }}
-                  />
+                  {/* Cover image — fixed aspect for alignment */}
+                  <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                    {p.cover ? (
+                      <img
+                        src={p.cover}
+                        alt={`${p.title} cover`}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div
+                        aria-hidden
+                        className="w-full h-full flex items-center justify-center"
+                        style={{
+                          background:
+                            "radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 60%), var(--card)",
+                        }}
+                      >
+                        <span className="font-serif text-5xl text-primary/30">
+                          {p.title.charAt(0)}
+                        </span>
+                      </div>
+                    )}
+                    <div className="absolute top-3 right-3">
+                      {p.privateProject ? (
+                        <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-mono bg-background/80 backdrop-blur text-muted-foreground border border-border">
+                          <Lock className="size-3" />
+                          {t.nda}
+                        </span>
+                      ) : (
+                        <span className="inline-flex items-center justify-center size-8 rounded-full bg-background/80 backdrop-blur text-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                          <ArrowUpRight className="size-4 group-hover:rotate-12 transition-transform" />
+                        </span>
+                      )}
+                    </div>
+                  </div>
 
-                  <div className="relative flex items-start justify-between gap-3">
+                  {/* Content */}
+                  <div className="flex flex-col flex-1 p-6">
                     <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
                       {p.tag[lang]}
                     </span>
-                    {p.privateProject ? (
-                      <span className="inline-flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-mono bg-muted text-muted-foreground border border-border">
-                        <Lock className="size-3" />
-                        {t.nda}
-                      </span>
-                    ) : (
-                      <ArrowUpRight className="size-5 text-muted-foreground group-hover:text-primary group-hover:rotate-12 transition-all" />
-                    )}
-                  </div>
-
-                  <div className="relative">
-                    <h3
-                      className={cn(
-                        "font-serif tracking-tight text-foreground group-hover:text-primary transition-colors",
-                        p.size === "lg"
-                          ? "text-4xl md:text-5xl"
-                          : "text-2xl md:text-3xl",
-                      )}
-                    >
+                    <h3 className="mt-2 font-serif text-2xl tracking-tight text-foreground group-hover:text-primary transition-colors">
                       {p.title}
                     </h3>
-                    <p
-                      className={cn(
-                        "mt-3 text-muted-foreground leading-relaxed",
-                        p.size === "lg" ? "text-base max-w-md" : "text-sm",
-                      )}
-                    >
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed flex-1">
                       {p.description[lang]}
                     </p>
-
                     <div className="mt-5 flex flex-wrap gap-1.5">
                       {p.stack.map((s) => (
                         <span

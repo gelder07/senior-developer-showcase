@@ -78,9 +78,19 @@ export function Experience() {
               <div className="flex flex-wrap items-center gap-3 mb-2">
                 <span
                   aria-hidden
-                  className="inline-flex items-center justify-center size-10 rounded-lg bg-primary/10 border border-primary/20 text-primary font-serif text-lg shrink-0"
+                  className="inline-flex items-center justify-center size-10 rounded-lg bg-card border border-border overflow-hidden shrink-0"
                 >
-                  {exp.company.replace(/^(Grupo Jaga · )/, "").charAt(0)}
+                  {exp.logo ? (
+                    <img
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      className="w-full h-full object-contain"
+                    />
+                  ) : (
+                    <span className="text-primary font-serif text-lg">
+                      {exp.company.replace(/^(Grupo Jaga · )/, "").charAt(0)}
+                    </span>
+                  )}
                 </span>
                 <h3 className="font-serif text-3xl md:text-4xl text-foreground tracking-tight">
                   {exp.role[lang]}{" "}

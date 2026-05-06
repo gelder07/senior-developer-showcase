@@ -21,7 +21,7 @@ export function Experience() {
           <div className="md:border-l border-border">
             {(["companies", "freelance"] as const).map((group) => (
               <div key={group} className="mb-8 last:mb-0">
-                <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground pl-4 mb-3">
+                <p className="font-mono text-md uppercase tracking-[0.25em] text-muted-foreground pl-4 mb-3">
                   {t.experience.groups[group]}
                 </p>
                 <ul>
@@ -38,7 +38,7 @@ export function Experience() {
                               : "border-transparent text-muted-foreground hover:text-foreground hover:border-border",
                           )}
                         >
-                          <span className="truncate">{e.company}</span>
+                          <span className="truncate text-md">{e.company}</span>
                           {e.topCompany && (
                             <span
                               className="size-1.5 rounded-full bg-primary shrink-0"
@@ -104,17 +104,13 @@ export function Experience() {
                 )}
               </div>
 
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                {exp.period}
-              </p>
-
               {exp.topCompany && (
                 <p className="mt-3 text-sm italic text-primary/90">
                   {t.topCompanyNote}
                 </p>
               )}
 
-              <p className="mt-8 text-muted-foreground leading-relaxed">
+              <p className="mt-8 text-muted-foreground leading-relaxed text-lg">
                 {exp.description[lang]}
               </p>
 

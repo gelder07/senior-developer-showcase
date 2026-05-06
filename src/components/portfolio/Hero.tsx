@@ -33,7 +33,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-mono text-sm text-primary mb-6 flex items-center gap-2"
+          className="font-mono text-lg text-primary mb-6 flex items-center gap-2"
         >
           <span className="inline-block size-1.5 rounded-full bg-primary animate-pulse" />
           {t.hero.greeting}
@@ -63,7 +63,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-6 flex items-center gap-2 text-sm text-muted-foreground font-mono"
+          className="mt-6 flex items-center gap-2 text-md text-muted-foreground font-mono"
         >
           <MapPin className="size-3.5 text-primary" />
           {t.hero.location}
@@ -95,7 +95,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground flex flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-md uppercase tracking-[0.3em] text-muted-foreground flex flex-col items-center gap-2"
       >
         {t.hero.scroll}
         <span className="block w-px h-8 bg-gradient-to-b from-muted-foreground to-transparent" />

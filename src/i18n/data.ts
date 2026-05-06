@@ -27,12 +27,12 @@ export const experiences: ExperienceItem[] = [
       es: "En GBM fui responsable de crear aplicaciones completas desde cero, participando directamente en la arquitectura, desarrollo y evolución de los productos. Más allá de implementar funcionalidades específicas, construí soluciones enfocadas en rendimiento, escalabilidad y experiencia de usuario, incluyendo aplicaciones móviles con capacidades offline-first para garantizar funcionamiento incluso sin conexión. También lideré migraciones tecnológicas desde Angular hacia React, mejorando significativamente la velocidad y mantenibilidad de las plataformas. Además, optimicé despliegues y procesos de infraestructura en DigitalOcean para asegurar estabilidad y disponibilidad continua. Mi trabajo no fue únicamente desarrollar módulos, sino construir productos sólidos que respondieran directamente a necesidades reales del negocio.",
       en: "At GBM I was responsible for building complete applications from scratch, taking direct part in product architecture, development and evolution. Beyond implementing specific features, I built solutions focused on performance, scalability and user experience, including mobile applications with offline-first capabilities to guarantee operation even without connectivity. I also led technology migrations from Angular to React, significantly improving the speed and maintainability of the platforms. In addition, I optimized deployments and infrastructure processes on DigitalOcean to ensure stability and continuous availability. My work was not only to develop modules, but to build solid products that directly addressed real business needs.",
     },
-    stack: ["React", "Angular", "Redux", "Zustand", "React Native", "DigitalOcean"],
+    stack: ["React", "PHP", "Laravel", "Redux", "Zustand", "React Native", "DigitalOcean"],
     group: "companies",
     logo: logoGbm,
   },
   {
-    company: "Compañía Licorera de Nicaragua",
+    company: "Ron Flor de Caña ·  Nicaragua",
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2020 — 2022",
     topCompany: true,
@@ -40,7 +40,7 @@ export const experiences: ExperienceItem[] = [
       es: "En Compañía Licorera de Nicaragua lideré la modernización de sistemas legacy que generaban limitaciones de rendimiento y mantenimiento. Analicé la arquitectura existente y migré plataformas hacia tecnologías modernas como React, Angular y Laravel, optimizando procesos críticos y mejorando la eficiencia operativa en aproximadamente un 40%. También diseñé soluciones full stack para plataformas financieras y de marketing, implementé visualización de datos para facilitar decisiones estratégicas y optimicé pipelines de despliegue reduciendo la dependencia de infraestructura tradicional.",
       en: "At Compañía Licorera de Nicaragua I led the modernization of legacy systems that were causing performance and maintenance limitations. I analyzed the existing architecture and migrated platforms to modern stacks like React, Angular and Laravel, optimizing critical processes and improving operational efficiency by around 40%. I also designed full stack solutions for finance and marketing platforms, built data visualizations to support strategic decisions and optimized deployment pipelines, reducing dependency on traditional infrastructure.",
     },
-    stack: ["React", "Angular", "Laravel", "MySQL", "Nginx", "DigitalOcean"],
+    stack: ["React", "Angular", "PHP", "Laravel", "MySQL", "Ubuntu", "Nginx", "DigitalOcean"],
     group: "companies",
     logo: logoClnsa,
   },
@@ -70,7 +70,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     company: "Grupo Jaga · Cargotrans",
-    role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
+    role: { es: "Crear Pagina Web  — Freelance", en: "Create Website — Freelance" },
     period: "2024",
     cover: coverCargotrans,
     description: {
@@ -82,7 +82,7 @@ export const experiences: ExperienceItem[] = [
   },
   {
     company: "Grupo Jaga · Wellpro",
-    role: { es: "Frontend — Freelance", en: "Frontend — Freelance" },
+    role: { es: "Crear Pagina Web — Freelance", en: "Create Website — Freelance" },
     period: "2024",
     cover: coverWellpro,
     description: {
@@ -94,18 +94,18 @@ export const experiences: ExperienceItem[] = [
   },
   {
     company: "Ogilvy / Target",
-    role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
+    role: { es: "Desarrollar Sistema Interno RRHH — Freelance", en: "Develop Internal HR System — Freelance" },
     period: "2021",
     description: {
-      es: "En proyectos freelance para Ogilvy y Target, desarrollé un sistema de recursos humanos diseñado para reemplazar procesos manuales y mejorar la trazabilidad operativa. Implementé workflows complejos de aprobaciones, estados y notificaciones utilizando React y Django REST, además de automatizar despliegues mediante pipelines con AWS y Zappa. Esto permitió reducir tareas repetitivas, mejorar la eficiencia del equipo y contar con una plataforma escalable y centralizada para la gestión interna.",
-      en: "On freelance projects for Ogilvy and Target, I built an HR system designed to replace manual processes and improve operational traceability. I implemented complex workflows for approvals, states and notifications using React and Django REST, and automated deployments through pipelines with AWS and Zappa. This reduced repetitive tasks, improved team efficiency and provided a scalable, centralized platform for internal management.",
+      es: "Desarrollé desde cero un sistema integral de recursos humanos diseñado para automatizar y centralizar procesos administrativos que anteriormente se manejaban de forma manual dentro de la organización. La plataforma permitió a los empleados gestionar de manera autónoma sus vacaciones, solicitudes internas, días libres, comprobantes de pago y documentos de planilla, mejorando significativamente la transparencia y accesibilidad de la información. Para el área administrativa construí un panel completo capaz de gestionar colaboradores, aprobaciones, estados, reportes, nómina y flujos internos complejos, reduciendo carga operativa y optimizando tiempos de respuesta. También implementé automatizaciones, notificaciones y workflows personalizados para diferentes roles dentro de la empresa, creando una solución escalable y alineada a las necesidades reales del negocio utilizando React, Django REST, PostgreSQL y AWS.",
+      en: "I built from scratch a complete HR system designed to automate and centralize administrative processes that were previously handled manually within the organization. The platform allowed employees to manage their vacations, internal requests, free days, pay slips and payroll documents autonomously, significantly improving the transparency and accessibility of information. For the administrative area I built a complete panel capable of managing employees, approvals, states, reports, payroll and complex internal flows, reducing operational load and optimizing response times. I also implemented automated workflows, notifications and personalized for different roles within the company, creating a scalable solution aligned with the real business needs using React, Django REST, PostgreSQL and AWS.",
     },
     stack: ["React", "Django REST", "PostgreSQL", "AWS"],
     group: "freelance",
   },
   {
     company: "Fachadas Modernas",
-    role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
+    role: { es: "Desarrollar Sistema Integral ERP — Freelance", en: "Develop Complete ERP System — Freelance" },
     period: "2023",
     description: {
       es: "Desarrollé desde cero un sistema integral de inventario, facturación y gestión comercial diseñado para optimizar las operaciones internas de una empresa de arquitectura con múltiples flujos manuales y poca trazabilidad de información. Analicé los procesos del negocio y construí una plataforma capaz de centralizar inventario, cotizaciones, compras, clientes, proveedores y facturación en un solo entorno, permitiendo un control mucho más preciso de las operaciones. Implementé funcionalidades avanzadas como generación automática de códigos de productos, consulta inteligente de artículos relacionados, dashboards de métricas totalmente personalizables y reportes estratégicos como kardex, entradas, salidas y control de compras. El sistema permitió reducir errores operativos, mejorar la toma de decisiones y brindar una visión mucho más clara y organizada del negocio en tiempo real.",

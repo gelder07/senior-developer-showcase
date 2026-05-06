@@ -15,7 +15,7 @@ export const translations = {
       titleAccent: "bellamente simples",
       titleSuffix: ", y amo lo que hago.",
       subtitle:
-        "Full Stack & Mobile Developer · +6 años · React, React Native, Node, .NET, AWS",
+        "Full Stack & Mobile Developer · +6 años · React, React Native, Php, Laravel, Python, Django rest framework, AWS",
       location: "Managua, Nicaragua — disponible para proyectos remotos",
       ctaProjects: "Ver proyectos",
       ctaContact: "Contactar",
@@ -29,13 +29,13 @@ export const translations = {
     nda: "Sistema privado · NDA",
     about: {
       label: "Sobre mí",
-      title: "Senior Developer enfocado en impacto real.",
-      body: "Desarrollador Full Stack y Mobile con más de 6 años construyendo aplicaciones de alto impacto en fintech, logística, legal y marketing. Especialista en React y arquitecturas modernas, con historial comprobado en mejorar rendimiento y eficiencia operativa hasta en un 60%. Lidero migraciones tecnológicas, desarrollo productos desde cero y despliego en la nube.",
+      title: "Senior Full Stack & Mobile Developer.",
+      body: "Creo experiencias web y móviles rápidas, escalables y centradas en negocio. Durante los últimos 6 años he desarrollado soluciones para tech, logística y empresas de alto crecimiento, mejorando procesos, rendimiento y eficiencia operativa con tecnologías modernas y arquitectura sólida.",
       stats: [
         { value: "+6", label: "Años de experiencia" },
         { value: "8+", label: "Empresas y clientes" },
         { value: "+60%", label: "Mejora de eficiencia" },
-        { value: "4+", label: "Apps en producción" },
+        { value: "+10", label: "Apps en producción" },
       ],
     },
     experience: {
@@ -89,7 +89,7 @@ export const translations = {
       titleAccent: "beautifully simple things",
       titleSuffix: ", and I love what I do.",
       subtitle:
-        "Full Stack & Mobile Developer · 6+ years · React, React Native, Node, .NET, AWS",
+        "Full Stack & Mobile Developer · 6+ years · React, React Native, Php, Laravel, Python, Django rest framework, AWS",
       location: "Managua, Nicaragua — available for remote work worldwide",
       ctaProjects: "View work",
       ctaContact: "Get in touch",
@@ -103,13 +103,13 @@ export const translations = {
     nda: "Private system · NDA",
     about: {
       label: "About",
-      title: "Senior developer focused on real impact.",
-      body: "Full Stack and Mobile developer with 6+ years building high-impact apps across fintech, logistics, legal and marketing. React specialist with a proven record of improving performance and operational efficiency by up to 60%. I lead tech migrations, ship products from zero to production, and deploy to the cloud.",
+      title: "Senior Full Stack & Mobile Developer.",
+      body: "I build fast, scalable web and mobile experiences focused on business impact. Over the last 6 years I've delivered solutions for tech, logistics and high-growth companies, improving processes, performance and operational efficiency with modern technologies and solid architecture.",
       stats: [
         { value: "6+", label: "Years of experience" },
         { value: "8+", label: "Companies & clients" },
         { value: "+60%", label: "Efficiency gains" },
-        { value: "4+", label: "Apps in production" },
+        { value: "10+", label: "Apps in production" },
       ],
     },
     experience: {

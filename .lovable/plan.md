@@ -1,130 +1,67 @@
-# Portafolio Personal — Gelder Gómez
+# Iteración 2 — Hero, proyectos freelance, trust bar, LinkedIn
 
-Portafolio premium para Full Stack & Mobile Developer con +6 años de experiencia. Inspirado en **mattfarley.ca** (limpio, tipográfico, mucho whitespace, personalidad sin ruido) combinado con **bento grid asimétrico** para proyectos. Bilingüe ES/EN con switch, dual theme dark/light (default dark), responsive y rápido.
+## 1. Hero — nuevo titular bilingüe
 
----
+Frase elegida: **"I design and code beautifully simple things, and I love what I do."**
 
-## Dirección visual
+- ES: *"Diseño y programo cosas **bellamente simples**, y amo lo que hago."*
+- EN: *"I design and code **beautifully simple things**, and I love what I do."*
 
-- **Tipografía protagonista**: serif elegante para titulares (Instrument Serif o Fraunces) + sans moderna para body (Inter / Geist). Mono sutil (JetBrains Mono) para acentos técnicos.
-- **Paleta dark (default)**: fondo casi-negro `#0A0A0A`, superficies `#111`, texto `#EDEDED`, acento cálido tipo amber/orange `#F5A623` (estilo Matt Farley).
-- **Paleta light**: fondo crema `#FAFAF7`, texto `#111`, acento mismo amber.
-- **Animaciones suaves**: fade + slide al entrar en viewport (Framer Motion), hover con scale sutil, transición de tema con view-transitions.
-- **Cursor personalizado** opcional (punto que crece sobre links).
-- **Grain/noise overlay** muy sutil para textura premium.
+Implementación:
+- Añadir `titleSuffix` en `src/i18n/translations.ts` (ambos idiomas).
+- Actualizar `Hero.tsx` para renderizar: `title` + `titleAccent` (italic + color primary) + `titleSuffix`.
+- Mantener tamaño grande serif y la animación staggered.
 
----
+## 2. Trust bar — empresas top de Nicaragua
 
-## Estructura del sitio (single page con anchors + nav sticky)
+Nueva sección compacta justo **debajo del Hero, antes de About**, con encabezado discreto:
 
-### 1. Header sticky
-- Logo monograma "GG"
-- Nav: Sobre mí · Experiencia · Proyectos · Stack · Contacto
-- Switch tema (sol/luna) + Switch idioma (ES/EN)
-- Glassmorphism sutil al scrollear
+- ES: *"Experiencia en algunas de las empresas más importantes de Nicaragua"*
+- EN: *"Experience at some of Nicaragua's leading companies"*
 
-### 2. Hero — Tipográfico minimalista
-- Saludo: "Hola, soy Gelder."
-- Titular grande serif: "Construyo productos web y móviles que **escalan**."
-- Subtítulo: "Full Stack & Mobile Developer · +6 años · React, React Native, Node, .NET, AWS"
-- Ubicación: "Managua, Nicaragua — disponible para proyectos remotos"
-- CTAs: "Ver proyectos" (primary amber) · "Contactar" (ghost)
-- Indicador de scroll abajo
+Carrete (marquee) infinito horizontal con autoplay y pausa al hover. Como aún no hay logos, uso **wordmarks tipográficos premium** (texto en serif/mono uppercase, tamaño grande, opacidad sutil) que se ven elegantes y enterprise. Cuando subas los PNG/SVG los reemplazo en una pasada.
 
-### 3. Sobre mí
-- Párrafo corto y potente extraído del resumen del CV (impacto comprobado +60% eficiencia, migraciones legacy → moderno, liderazgo técnico)
-- Mini-stats en línea: `+6 años` · `8+ empresas` · `Fintech · Logística · Legal · Marketing` · `Apps móviles & SaaS`
+Empresas en el carrete: **GBM**, **Compañía Licorera de Nicaragua**, **LAFISE**, **Contollo**, **Grupo Jaga**, **SmartLaw**, **Ogilvy**, **Target**.
 
-### 4. Experiencia — Timeline con tabs verticales
-Layout split: tabs de empresa a la izquierda, detalle a la derecha (estilo Brittany Chiang adaptado).
+Componente nuevo: `src/components/portfolio/TrustBar.tsx` — animación con CSS `@keyframes` (sin libs extra).
 
-Agrupado en 3 bloques con separador visual:
+## 3. Destacar GBM, Licorera y LAFISE como top empresas del país
 
-**Empresas (Nicaragua/Internacional)**
-- Contollo — Frontend/Mobile Lead (React Native, AWS Serverless)
-- GBM Nicaragua — Full Stack (Migración Angular→React, offline-first)
-- Compañía Licorera de Nicaragua — Full Stack (+40% eficiencia)
-- LAFISE — Full Stack (sistema agroindustrial)
+En `Experience.tsx`:
+- Añadir un badge "Top Nicaragua" (chip dorado sutil con ícono `Award`) al lado del nombre de la empresa cuando aplica.
+- Añadir una línea descriptiva bajo el rol cuando es una de esas tres: *"Una de las empresas más importantes de Nicaragua"* / *"One of Nicaragua's leading companies"*.
+- Marcar las empresas con flag `topCompany: true` en `data.ts`.
 
-**Freelance / Clientes**
-- Grupo Jaga Cargotrans — Plataforma logística
-- Grupo Jaga Wellpro — Plataforma equipos médicos
-- SmartLaw — SaaS legal completo desde cero
-- Ogilvy / Target — Sistema RRHH
+En la lista lateral de tabs, añadir un punto dorado al lado del nombre para esas 3.
 
-Cada item: rol, periodo, bullets de impacto, stack como chips.
+## 4. Proyectos destacados — solo freelance + URLs
 
-### 5. Proyectos destacados — Bento grid asimétrico
-Grid de 6-8 cards con tamaños distintos (1x1, 2x1, 1x2, 2x2):
+Cambios en `data.ts` y `Projects.tsx`:
 
-- **Card grande (2x2)**: SmartLaw — SaaS legal con pagos y gestión documental
-- **Card horizontal (2x1)**: Contollo — App React Native de digitalización 3D
-- **Card vertical (1x2)**: Grupo Jaga Cargotrans — Plataforma logística
-- **Cards 1x1**: Wellpro · LAFISE · Ogilvy RRHH · Licorera Nicaragua
+- Filtrar `projects` para mostrar **solo los freelance**: SmartLaw, Cargotrans, Wellpro, Ogilvy/Target.
+- Eliminar los cards de GBM Suite, Licorera, Contollo de esta sección (siguen visibles en Experiencia).
+- Añadir campo `url?: string` a cada proyecto:
+  - Cargotrans → `https://www.cargotrans.com.ni`
+  - Wellpro → `https://wellpro.es`
+  - SmartLaw → `https://smartlawweb.com`
+  - Ogilvy/Target → sin URL (sistema privado de RRHH); en su lugar mostrar badge *"Sistema privado · NDA"* / *"Private system · NDA"* y deshabilitar el ícono de link externo.
+- Cards con URL: convertir el `<article>` en `<a target="_blank" rel="noopener noreferrer">` con cursor-pointer real, y el ícono `ArrowUpRight` se anima al hover.
+- Cards sin URL: mantener como `<article>` con badge NDA en lugar del ícono.
+- Re-balancear el bento a 4 cards (1 grande SmartLaw, 1 horizontal Cargotrans, 1 vertical Wellpro, 1 cuadrado Ogilvy).
 
-Cada card: título, una línea de descripción, stack chips, hover con leve elevación + acento amber, link a caso o repo si existe.
+## 5. LinkedIn — link real en todo el sitio
 
-### 6. Stack tecnológico
-Bento más pequeño con categorías:
-- Frontend · Backend · Mobile · Cloud & DevOps · Databases · Otros
-- Iconos SVG monocromáticos (estilo simple-icons), grid limpio, sin ruido.
+URL: `https://www.linkedin.com/in/gelder-jos%C3%A9-g%C3%B3mez-solorzano-790768222`
 
-### 7. Logros clave
-4 cards horizontales con números grandes:
-- `+60%` eficiencia operativa
-- `8+` migraciones/productos liderados
-- `4+` apps en producción
-- `+6` años de experiencia
+- En `Contact.tsx`: reemplazar `LINKEDIN = "#"` por la URL real.
+- Añadir ícono LinkedIn en el `Header.tsx` (junto a los toggles de tema/idioma) como acceso rápido permanente.
+- Añadir LinkedIn + email + WhatsApp + GitHub en el `Footer.tsx`.
 
-### 8. Contacto — CTA fuerte
-- Titular grande: "¿Tienes un proyecto en mente?"
-- Subtítulo: disponibilidad freelance / full-time remoto
-- Botones grandes:
-  - **Email** → `mailto:geldergomez04@gmail.com`
-  - **WhatsApp** → `https://wa.me/50581867161`
-  - **LinkedIn** (placeholder, lo añades después)
-  - **GitHub** (placeholder)
-- Email visible en texto grande con copy-to-clipboard
+## 6. Pequeños ajustes UX
 
-### 9. Footer
-- Monograma GG · "Diseñado y desarrollado por Gelder Gómez · 2026"
-- Links sociales repetidos
-- Toggle tema/idioma duplicado
+- Subtítulo del hero: ajustar para que combine con el nuevo título largo (mantener stack pero con un párrafo descriptivo más cálido).
+- Asegurar que el carrete (TrustBar) respete `prefers-reduced-motion` (pausa la animación).
 
 ---
 
-## Internacionalización (ES/EN)
-
-- Sistema simple con objeto de traducciones (`src/i18n/es.ts`, `en.ts`) + hook `useT()`.
-- Persistencia en `localStorage`.
-- Default: español (mercado local + freelance LATAM); switch instantáneo a inglés para reclutadores internacionales.
-- Todos los textos del CV traducidos a ambos idiomas.
-
----
-
-## Tema dark/light
-
-- Toggle con persistencia en `localStorage` + respeto a `prefers-color-scheme`.
-- Transición suave entre temas (no flash).
-- Tokens CSS en `src/styles.css` ya existente, ajustados a la paleta nueva.
-
----
-
-## Detalles técnicos (para referencia)
-
-- **Stack**: TanStack Start (ya configurado) + Tailwind v4 + Framer Motion + Lucide icons.
-- **Rutas**: single page en `src/routes/index.tsx` con secciones; anchor scroll suave. Cumple SSR porque todo el contenido vive en una ruta real.
-- **SEO**: `head()` en index con title bilingüe, description, og:image (generamos uno tipográfico), twitter card.
-- **Performance**: lazy load de imágenes de proyectos, fuentes con `font-display: swap`, sin librerías pesadas.
-- **Accesibilidad**: contraste AA, focus visible, navegación por teclado, `prefers-reduced-motion` respetado.
-- **Componentes nuevos**: `Header`, `Hero`, `About`, `ExperienceTabs`, `BentoProjects`, `StackGrid`, `Stats`, `Contact`, `Footer`, `ThemeToggle`, `LangToggle`.
-
----
-
-## Lo que necesitaré después (no bloqueante)
-
-- URLs reales de GitHub y LinkedIn (ahora dejo placeholders `#`)
-- Screenshots/mockups de los proyectos si quieres mostrarlos en las cards (si no, uso patterns/gradients elegantes)
-- Confirmar si quieres mostrar el botón de descarga de CV (PDF)
-
-Apruébame el plan y lo construyo completo en una sola pasada.
+Apruébalo y lo construyo todo en una sola pasada. Cuando subas los logos PNG/SVG luego, los reemplazo en el TrustBar sin tocar el resto.

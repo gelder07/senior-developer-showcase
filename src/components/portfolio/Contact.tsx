@@ -22,9 +22,9 @@ export function Contact() {
       label: "Email",
       icon: Mail,
     },
-    { href: WHATSAPP, label: "WhatsApp", icon: MessageCircle, external: true },
-    { href: LINKEDIN, label: "LinkedIn", icon: Linkedin, external: true },
-    { href: GITHUB, label: "GitHub", icon: Github, external: true },
+    { href: WHATSAPP_URL, label: "WhatsApp", icon: MessageCircle, external: true },
+    { href: LINKEDIN_URL, label: "LinkedIn", icon: Linkedin, external: true },
+    { href: GITHUB_URL, label: "GitHub", icon: Github, external: true },
   ];
 
   return (

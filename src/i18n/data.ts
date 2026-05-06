@@ -1,6 +1,6 @@
 import type { Lang } from "./translations";
 import coverCargotrans from "@/assets/cover-cargotrans.png";
-import coverPlaceholder from "@/assets/project-placeholder.jpg";
+import coverWellpro from "@/assets/cover-wellpro.png";
 
 export interface ExperienceItem {
   company: string;

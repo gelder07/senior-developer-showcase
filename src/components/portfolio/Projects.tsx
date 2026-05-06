@@ -58,11 +58,11 @@ export function Projects() {
                     loading="lazy"
                     width={1280}
                     height={800}
-                    className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                    className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-70 transition-opacity duration-500"
                   />
                   <div
                     aria-hidden
-                    className="absolute inset-0 bg-gradient-to-t from-card via-card/85 to-card/60"
+                    className="absolute inset-0 bg-gradient-to-t from-card via-card/70 to-card/30"
                   />
                   <div
                     aria-hidden

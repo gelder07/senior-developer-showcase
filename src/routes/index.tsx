@@ -41,11 +41,11 @@ function Index() {
         <Header />
         <main>
           <Hero />
-          <TrustBar />
           <About />
           <Experience />
           <Projects />
           <Stack />
+          <TrustBar />
           <Contact />
         </main>
         <Footer />

@@ -87,17 +87,10 @@ export function Experience() {
                 </p>
               )}
 
-              <ul className="mt-8 space-y-4">
-                {exp.bullets[lang].map((b) => (
-                  <li
-                    key={b}
-                    className="flex gap-3 text-muted-foreground leading-relaxed"
-                  >
-                    <span className="text-primary mt-2 shrink-0">▹</span>
-                    <span>{b}</span>
-                  </li>
-                ))}
-              </ul>
+              <p className="mt-8 text-muted-foreground leading-relaxed">
+                {exp.description[lang]}
+              </p>
+
 
               <div className="mt-8 flex flex-wrap gap-2">
                 {exp.stack.map((s) => (

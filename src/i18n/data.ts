@@ -4,7 +4,7 @@ export interface ExperienceItem {
   company: string;
   role: { es: string; en: string };
   period: string;
-  bullets: { es: string[]; en: string[] };
+  description: { es: string; en: string };
   stack: string[];
   group: "companies" | "freelance";
   topCompany?: boolean;
@@ -16,19 +16,9 @@ export const experiences: ExperienceItem[] = [
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2022 — 2023",
     topCompany: true,
-    bullets: {
-      es: [
-        "Lideré la migración de Angular a React mejorando rendimiento y UX.",
-        "Implementé arquitectura escalable alineada al negocio.",
-        "Desarrollé funcionalidades offline-first en aplicación móvil.",
-        "Gestioné despliegues en DigitalOcean optimizando disponibilidad.",
-      ],
-      en: [
-        "Led the Angular → React migration, improving performance and UX.",
-        "Built scalable architecture aligned with business needs.",
-        "Developed offline-first features in the mobile app.",
-        "Managed DigitalOcean deployments optimizing availability.",
-      ],
+    description: {
+      es: "Como Desarrollador Full Stack en GBM, participé en la migración de aplicaciones desarrolladas en Angular hacia una arquitectura moderna con React, resolviendo problemas de rendimiento, mantenibilidad y experiencia de usuario. Implementé una estructura escalable alineada a las necesidades del negocio, desarrollé funcionalidades offline-first para aplicaciones móviles y optimicé despliegues en DigitalOcean para mejorar disponibilidad y estabilidad operativa, permitiendo una experiencia más rápida y eficiente para los usuarios finales.",
+      en: "As a Full Stack Developer at GBM, I took part in migrating Angular applications to a modern React architecture, solving performance, maintainability and UX issues. I implemented a scalable structure aligned with business needs, developed offline-first features for mobile apps and optimized DigitalOcean deployments to improve availability and operational stability, delivering a faster and more efficient experience for end users.",
     },
     stack: ["React", "Angular", "Redux", "Zustand", "React Native", "DigitalOcean"],
     group: "companies",
@@ -38,19 +28,9 @@ export const experiences: ExperienceItem[] = [
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2020 — 2022",
     topCompany: true,
-    bullets: {
-      es: [
-        "Migré sistemas legacy a tecnologías modernas mejorando estabilidad.",
-        "Aumenté la eficiencia del sistema en ~40% mediante refactorización.",
-        "Diseñé arquitectura full-stack para plataformas financieras y de marketing.",
-        "Implementé visualización de datos para decisiones estratégicas.",
-      ],
-      en: [
-        "Migrated legacy systems to modern stacks improving stability.",
-        "Boosted system efficiency by ~40% through refactoring.",
-        "Designed full-stack architecture for finance and marketing platforms.",
-        "Built data visualizations to support strategic decisions.",
-      ],
+    description: {
+      es: "En Compañía Licorera de Nicaragua lideré la modernización de sistemas legacy que generaban limitaciones de rendimiento y mantenimiento. Analicé la arquitectura existente y migré plataformas hacia tecnologías modernas como React, Angular y Laravel, optimizando procesos críticos y mejorando la eficiencia operativa en aproximadamente un 40%. También diseñé soluciones full stack para plataformas financieras y de marketing, implementé visualización de datos para facilitar decisiones estratégicas y optimicé pipelines de despliegue reduciendo la dependencia de infraestructura tradicional.",
+      en: "At Compañía Licorera de Nicaragua I led the modernization of legacy systems that were causing performance and maintenance limitations. I analyzed the existing architecture and migrated platforms to modern stacks like React, Angular and Laravel, optimizing critical processes and improving operational efficiency by around 40%. I also designed full stack solutions for finance and marketing platforms, built data visualizations to support strategic decisions and optimized deployment pipelines, reducing dependency on traditional infrastructure.",
     },
     stack: ["React", "Angular", "Laravel", "MySQL", "Nginx", "DigitalOcean"],
     group: "companies",
@@ -60,17 +40,9 @@ export const experiences: ExperienceItem[] = [
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2019 — 2020",
     topCompany: true,
-    bullets: {
-      es: [
-        "Desarrollé sistema de inventario y producción para agroindustria.",
-        "Implementé portal de cliente con visualización en tiempo real.",
-        "Mejoré el control operativo digitalizando procesos manuales.",
-      ],
-      en: [
-        "Built an inventory and production system for agribusiness.",
-        "Shipped a client portal with real-time data visualization.",
-        "Improved operational control by digitizing manual processes.",
-      ],
+    description: {
+      es: "Como Desarrollador Full Stack en LAFISE, desarrollé un sistema de inventario y producción orientado al sector agroindustrial para resolver problemas de control operativo y seguimiento manual de procesos. Implementé una plataforma con visualización en tiempo real para clientes y equipos internos utilizando React, Redux y Django, mejorando la trazabilidad de operaciones y facilitando la toma de decisiones mediante la digitalización de procesos críticos.",
+      en: "As a Full Stack Developer at LAFISE, I built an inventory and production system for the agribusiness sector to solve operational control issues and replace manual process tracking. I shipped a platform with real-time data visualization for clients and internal teams using React, Redux and Django, improving operational traceability and supporting decision-making by digitizing critical processes.",
     },
     stack: ["React", "Redux", "Django", "Tailwind"],
     group: "companies",
@@ -79,19 +51,9 @@ export const experiences: ExperienceItem[] = [
     company: "Contollo",
     role: { es: "Frontend / Mobile Lead", en: "Frontend / Mobile Lead" },
     period: "2023 — 2024",
-    bullets: {
-      es: [
-        "Lideré equipo de 3 desarrolladores mejorando tiempos de entrega y calidad de código.",
-        "Desarrollé app React Native para digitalización de espacios en 3D.",
-        "Implementé arquitectura serverless con AWS Lambda, DynamoDB y GraphQL.",
-        "Entregué producto end-to-end desde diseño hasta producción.",
-      ],
-      en: [
-        "Led a team of 3 developers, improving delivery time and code quality.",
-        "Built a React Native app for 3D space digitization.",
-        "Implemented serverless architecture with AWS Lambda, DynamoDB and GraphQL.",
-        "Delivered the product end-to-end from design to production.",
-      ],
+    description: {
+      es: "En Contollo lideré un equipo de tres desarrolladores para construir una aplicación móvil enfocada en digitalización de espacios en 3D. Detecté problemas relacionados con tiempos de entrega y escalabilidad técnica, por lo que estructuré una arquitectura basada en React Native, AWS Lambda, DynamoDB y GraphQL para optimizar el flujo de desarrollo y la comunicación entre servicios. También integré APIs externas para visualizar catálogos en tiempo real y coordiné el desarrollo end-to-end del producto, desde el diseño hasta producción, logrando mejorar la calidad del código y acelerar la entrega de funcionalidades.",
+      en: "At Contollo I led a team of three developers to build a mobile app focused on 3D space digitization. I identified delivery-time and scalability issues, and structured an architecture based on React Native, AWS Lambda, DynamoDB and GraphQL to optimize the development flow and service-to-service communication. I also integrated external APIs to visualize real-time catalogs and coordinated end-to-end product development, from design to production, improving code quality and accelerating feature delivery.",
     },
     stack: ["React Native", "GraphQL", "AWS Lambda", "DynamoDB"],
     group: "companies",
@@ -100,19 +62,9 @@ export const experiences: ExperienceItem[] = [
     company: "Grupo Jaga · Cargotrans",
     role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
     period: "2024",
-    bullets: {
-      es: [
-        "Lideré el rediseño y modernización completa de la plataforma logística.",
-        "Diseñé una experiencia UI/UX moderna enfocada en confianza y conversión.",
-        "Optimicé rendimiento, estructura y adaptabilidad móvil del sitio.",
-        "Alineé la plataforma digital con la visión estratégica del negocio.",
-      ],
-      en: [
-        "Led the full redesign and modernization of the logistics platform.",
-        "Designed a modern UI/UX focused on trust and conversion.",
-        "Optimized performance, structure and mobile responsiveness.",
-        "Aligned the digital platform with business strategy.",
-      ],
+    description: {
+      es: "Como Desarrollador Frontend / Full Stack en el proyecto logístico de Cargotrans, lideré la modernización completa de una plataforma web desactualizada que afectaba la imagen digital y la experiencia de los clientes. Analicé las limitaciones del sistema anterior y desarrollé una nueva arquitectura con React y Next.js enfocada en rendimiento, escalabilidad y diseño responsive. Rediseñé toda la experiencia UI/UX para transmitir mayor confianza y claridad, optimicé tiempos de carga y añadí nuevas funcionalidades para mejorar la comunicación con clientes y la navegación en dispositivos móviles, logrando una renovación integral de la presencia digital de la empresa y fortaleciendo su posicionamiento como operador logístico estratégico.",
+      en: "As a Frontend / Full Stack Developer on the Cargotrans logistics project, I led the full modernization of an outdated web platform that was hurting the company's digital image and customer experience. I analyzed the limitations of the previous system and built a new architecture with React and Next.js focused on performance, scalability and responsive design. I redesigned the entire UI/UX to convey greater trust and clarity, optimized load times and added new features to improve customer communication and mobile navigation, delivering a complete refresh of the company's digital presence and strengthening its positioning as a strategic logistics operator.",
     },
     stack: ["React", "Next.js", "UI/UX", "Performance"],
     group: "freelance",
@@ -121,17 +73,9 @@ export const experiences: ExperienceItem[] = [
     company: "Grupo Jaga · Wellpro",
     role: { es: "Frontend — Freelance", en: "Frontend — Freelance" },
     period: "2024",
-    bullets: {
-      es: [
-        "Desarrollé el frontend completo de plataforma de equipos médicos.",
-        "Transformé propuestas visuales en una experiencia clara y profesional.",
-        "Implementé maquetación responsive y carga optimizada.",
-      ],
-      en: [
-        "Built the full frontend for a medical equipment platform.",
-        "Turned visual proposals into a clear, professional experience.",
-        "Shipped responsive layout and optimized performance.",
-      ],
+    description: {
+      es: "En el desarrollo de la plataforma web de Wellpro, identifiqué la necesidad de transformar una propuesta visual estática en una experiencia moderna, estable y optimizada para múltiples dispositivos. Construí el frontend completo utilizando React y Next.js, implementando una estructura responsive y optimizaciones de rendimiento que mejoraron la velocidad de carga y estabilidad general del sistema. Además, integré contenido dinámico y una navegación enfocada en experiencia de usuario, permitiendo que los clientes accedieran de forma más clara y rápida a la información de productos y servicios médicos.",
+      en: "While building the Wellpro web platform, I identified the need to turn a static visual proposal into a modern, stable, multi-device experience. I built the full frontend using React and Next.js, implementing a responsive structure and performance optimizations that improved load speed and overall system stability. I also integrated dynamic content and UX-focused navigation, allowing customers to access medical product and service information more clearly and quickly.",
     },
     stack: ["React", "Next.js", "Responsive", "Performance"],
     group: "freelance",
@@ -140,17 +84,9 @@ export const experiences: ExperienceItem[] = [
     company: "SmartLaw",
     role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
     period: "2022 — 2023",
-    bullets: {
-      es: [
-        "Diseñé y desarrollé una plataforma legal SaaS completa desde cero.",
-        "Implementé sistema de pagos, suscripciones y gestión documental.",
-        "Construí backend escalable con .NET Core y arquitectura SOLID.",
-      ],
-      en: [
-        "Designed and built a full legal SaaS platform from scratch.",
-        "Implemented payments, subscriptions and document management.",
-        "Built a scalable .NET Core backend following SOLID principles.",
-      ],
+    description: {
+      es: "Como Desarrollador Full Stack en SmartLaw, desarrollé desde cero una plataforma SaaS orientada a la gestión legal, resolviendo la necesidad de centralizar documentos, pagos y suscripciones en un solo sistema escalable. Diseñé un frontend en React enfocado en experiencia de usuario para flujos complejos y construí un backend robusto en .NET Core siguiendo principios SOLID, permitiendo una arquitectura mantenible, segura y preparada para crecimiento futuro.",
+      en: "As a Full Stack Developer at SmartLaw, I built from scratch a SaaS platform for legal management, solving the need to centralize documents, payments and subscriptions in a single scalable system. I designed a React frontend focused on UX for complex flows and built a robust .NET Core backend following SOLID principles, delivering a maintainable, secure architecture ready for future growth.",
     },
     stack: ["React", "Redux Toolkit", ".NET Core", "AWS", "Tailwind"],
     group: "freelance",
@@ -159,17 +95,9 @@ export const experiences: ExperienceItem[] = [
     company: "Ogilvy / Target",
     role: { es: "Full Stack — Freelance", en: "Full Stack — Freelance" },
     period: "2021",
-    bullets: {
-      es: [
-        "Desarrollé un sistema de RRHH reemplazando procesos manuales.",
-        "Implementé workflows complejos: aprobaciones, estados y notificaciones.",
-        "Construí arquitectura escalable con Django REST + React.",
-      ],
-      en: [
-        "Built an HR system replacing fully manual workflows.",
-        "Implemented complex workflows: approvals, states, notifications.",
-        "Designed a scalable architecture with Django REST + React.",
-      ],
+    description: {
+      es: "En proyectos freelance para Ogilvy y Target, desarrollé un sistema de recursos humanos diseñado para reemplazar procesos manuales y mejorar la trazabilidad operativa. Implementé workflows complejos de aprobaciones, estados y notificaciones utilizando React y Django REST, además de automatizar despliegues mediante pipelines con AWS y Zappa. Esto permitió reducir tareas repetitivas, mejorar la eficiencia del equipo y contar con una plataforma escalable y centralizada para la gestión interna.",
+      en: "On freelance projects for Ogilvy and Target, I built an HR system designed to replace manual processes and improve operational traceability. I implemented complex workflows for approvals, states and notifications using React and Django REST, and automated deployments through pipelines with AWS and Zappa. This reduced repetitive tasks, improved team efficiency and provided a scalable, centralized platform for internal management.",
     },
     stack: ["React", "Django REST", "PostgreSQL", "AWS"],
     group: "freelance",
@@ -246,11 +174,6 @@ export const trustCompanies: { name: string; topCompany?: boolean }[] = [
   { name: "GBM", topCompany: true },
   { name: "Compañía Licorera de Nicaragua", topCompany: true },
   { name: "LAFISE", topCompany: true },
-  { name: "Contollo" },
-  { name: "Grupo Jaga" },
-  { name: "SmartLaw" },
-  { name: "Ogilvy" },
-  { name: "Target" },
 ];
 
 export const LINKEDIN_URL =

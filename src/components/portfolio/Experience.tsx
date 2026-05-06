@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Award } from "lucide-react";
 import { useAppState } from "@/hooks/use-app-state";
 import { experiences } from "@/i18n/data";
 import { SectionHeading } from "./SectionHeading";
@@ -15,7 +16,7 @@ export function Experience() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading label={t.experience.label} title={t.experience.title} />
 
-        <div className="grid md:grid-cols-[260px_1fr] gap-10 lg:gap-16">
+        <div className="grid md:grid-cols-[280px_1fr] gap-10 lg:gap-16">
           {/* Tabs */}
           <div className="md:border-l border-border">
             {(["companies", "freelance"] as const).map((group) => (
@@ -31,13 +32,19 @@ export function Experience() {
                           type="button"
                           onClick={() => setActive(i)}
                           className={cn(
-                            "w-full text-left px-4 py-3 text-sm transition-all border-l-2 -ml-px",
+                            "w-full text-left px-4 py-3 text-sm transition-all border-l-2 -ml-px flex items-center gap-2",
                             active === i
                               ? "border-primary text-primary bg-primary/5 font-medium"
                               : "border-transparent text-muted-foreground hover:text-foreground hover:border-border",
                           )}
                         >
-                          {e.company}
+                          <span className="truncate">{e.company}</span>
+                          {e.topCompany && (
+                            <span
+                              className="size-1.5 rounded-full bg-primary shrink-0"
+                              aria-label="Top Nicaragua company"
+                            />
+                          )}
                         </button>
                       </li>
                     ) : null,
@@ -57,13 +64,28 @@ export function Experience() {
               transition={{ duration: 0.35 }}
               className="min-h-[360px]"
             >
-              <h3 className="font-serif text-3xl md:text-4xl text-foreground tracking-tight">
-                {exp.role[lang]}{" "}
-                <span className="text-primary">@ {exp.company}</span>
-              </h3>
-              <p className="mt-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
+              <div className="flex flex-wrap items-center gap-3 mb-2">
+                <h3 className="font-serif text-3xl md:text-4xl text-foreground tracking-tight">
+                  {exp.role[lang]}{" "}
+                  <span className="text-primary">@ {exp.company}</span>
+                </h3>
+                {exp.topCompany && (
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
+                    <Award className="size-3" />
+                    {t.topCompany}
+                  </span>
+                )}
+              </div>
+
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {exp.period}
               </p>
+
+              {exp.topCompany && (
+                <p className="mt-3 text-sm italic text-primary/90">
+                  {t.topCompanyNote}
+                </p>
+              )}
 
               <ul className="mt-8 space-y-4">
                 {exp.bullets[lang].map((b) => (

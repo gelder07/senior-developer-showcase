@@ -7,34 +7,15 @@ export interface ExperienceItem {
   bullets: { es: string[]; en: string[] };
   stack: string[];
   group: "companies" | "freelance";
+  topCompany?: boolean;
 }
 
 export const experiences: ExperienceItem[] = [
   {
-    company: "Contollo",
-    role: { es: "Frontend / Mobile Lead", en: "Frontend / Mobile Lead" },
-    period: "2023 — 2024",
-    bullets: {
-      es: [
-        "Lideré equipo de 3 desarrolladores mejorando tiempos de entrega y calidad de código.",
-        "Desarrollé app React Native para digitalización de espacios en 3D.",
-        "Implementé arquitectura serverless con AWS Lambda, DynamoDB y GraphQL.",
-        "Entregué producto end-to-end desde diseño hasta producción.",
-      ],
-      en: [
-        "Led a team of 3 developers, improving delivery time and code quality.",
-        "Built a React Native app for 3D space digitization.",
-        "Implemented serverless architecture with AWS Lambda, DynamoDB and GraphQL.",
-        "Delivered the product end-to-end from design to production.",
-      ],
-    },
-    stack: ["React Native", "GraphQL", "AWS Lambda", "DynamoDB"],
-    group: "companies",
-  },
-  {
     company: "GBM Nicaragua",
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2022 — 2023",
+    topCompany: true,
     bullets: {
       es: [
         "Lideré la migración de Angular a React mejorando rendimiento y UX.",
@@ -56,6 +37,7 @@ export const experiences: ExperienceItem[] = [
     company: "Compañía Licorera de Nicaragua",
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2020 — 2022",
+    topCompany: true,
     bullets: {
       es: [
         "Migré sistemas legacy a tecnologías modernas mejorando estabilidad.",
@@ -77,6 +59,7 @@ export const experiences: ExperienceItem[] = [
     company: "LAFISE",
     role: { es: "Full Stack Developer", en: "Full Stack Developer" },
     period: "2019 — 2020",
+    topCompany: true,
     bullets: {
       es: [
         "Desarrollé sistema de inventario y producción para agroindustria.",
@@ -90,6 +73,27 @@ export const experiences: ExperienceItem[] = [
       ],
     },
     stack: ["React", "Redux", "Django", "Tailwind"],
+    group: "companies",
+  },
+  {
+    company: "Contollo",
+    role: { es: "Frontend / Mobile Lead", en: "Frontend / Mobile Lead" },
+    period: "2023 — 2024",
+    bullets: {
+      es: [
+        "Lideré equipo de 3 desarrolladores mejorando tiempos de entrega y calidad de código.",
+        "Desarrollé app React Native para digitalización de espacios en 3D.",
+        "Implementé arquitectura serverless con AWS Lambda, DynamoDB y GraphQL.",
+        "Entregué producto end-to-end desde diseño hasta producción.",
+      ],
+      en: [
+        "Led a team of 3 developers, improving delivery time and code quality.",
+        "Built a React Native app for 3D space digitization.",
+        "Implemented serverless architecture with AWS Lambda, DynamoDB and GraphQL.",
+        "Delivered the product end-to-end from design to production.",
+      ],
+    },
+    stack: ["React Native", "GraphQL", "AWS Lambda", "DynamoDB"],
     group: "companies",
   },
   {
@@ -178,6 +182,8 @@ export interface Project {
   stack: string[];
   size: "lg" | "md-h" | "md-v" | "sm";
   tag: { es: string; en: string };
+  url?: string;
+  privateProject?: boolean;
 }
 
 export const projects: Project[] = [
@@ -190,66 +196,40 @@ export const projects: Project[] = [
     stack: ["React", ".NET Core", "AWS", "Stripe"],
     size: "lg",
     tag: { es: "SaaS Legal", en: "Legal SaaS" },
-  },
-  {
-    title: "Contollo",
-    description: {
-      es: "App móvil React Native para digitalización de espacios en 3D con backend serverless en AWS.",
-      en: "React Native mobile app for 3D space digitization powered by an AWS serverless backend.",
-    },
-    stack: ["React Native", "GraphQL", "AWS Lambda"],
-    size: "md-h",
-    tag: { es: "Mobile · 3D", en: "Mobile · 3D" },
+    url: "https://smartlawweb.com",
   },
   {
     title: "Cargotrans",
     description: {
-      es: "Plataforma logística rediseñada para fortalecer la presencia digital y conversión del operador.",
+      es: "Plataforma logística rediseñada para fortalecer la presencia digital y la conversión del operador.",
       en: "Logistics platform redesigned to strengthen the operator's digital presence and conversion.",
     },
     stack: ["Next.js", "React", "UI/UX"],
-    size: "md-v",
+    size: "md-h",
     tag: { es: "Logística", en: "Logistics" },
-  },
-  {
-    title: "GBM Suite",
-    description: {
-      es: "Migración Angular → React con módulo móvil offline-first.",
-      en: "Angular → React migration with an offline-first mobile module.",
-    },
-    stack: ["React", "React Native"],
-    size: "sm",
-    tag: { es: "Enterprise", en: "Enterprise" },
-  },
-  {
-    title: "Licorera Nicaragua",
-    description: {
-      es: "Plataforma fintech y de marketing con +40% de eficiencia operativa.",
-      en: "Fintech and marketing platform delivering +40% operational efficiency.",
-    },
-    stack: ["React", "Laravel", "MySQL"],
-    size: "sm",
-    tag: { es: "Fintech", en: "Fintech" },
+    url: "https://www.cargotrans.com.ni",
   },
   {
     title: "Wellpro",
     description: {
-      es: "Plataforma de equipos médicos para el hogar con catálogo dinámico.",
-      en: "Home medical equipment platform with a dynamic catalog.",
+      es: "Plataforma de equipos médicos para el hogar con catálogo dinámico y experiencia clara.",
+      en: "Home medical equipment platform with a dynamic catalog and clear UX.",
     },
     stack: ["React", "Next.js"],
-    size: "sm",
+    size: "md-v",
     tag: { es: "Healthcare", en: "Healthcare" },
+    url: "https://wellpro.es",
   },
   {
-    title: "Ogilvy HR",
+    title: "Ogilvy / Target HR",
     description: {
-      es: "Sistema de RRHH con workflows de aprobación y notificaciones.",
-      en: "HR system with approval workflows and notifications.",
+      es: "Sistema interno de RRHH con workflows de aprobación, estados y notificaciones.",
+      en: "Internal HR system with approval workflows, states and notifications.",
     },
-    stack: ["React", "Django", "PostgreSQL"],
-    size: "sm",
+    stack: ["React", "Django REST", "PostgreSQL", "AWS"],
+    size: "md-h",
     tag: { es: "RRHH", en: "HR" },
+    privateProject: true,
   },
 ];
 
@@ -261,6 +241,23 @@ export const stack: Record<string, string[]> = {
   databases: ["PostgreSQL", "MySQL", "DynamoDB"],
   other: ["GraphQL", "REST APIs", "SOLID", "SCRUM", "Git"],
 };
+
+export const trustCompanies: { name: string; topCompany?: boolean }[] = [
+  { name: "GBM", topCompany: true },
+  { name: "Compañía Licorera de Nicaragua", topCompany: true },
+  { name: "LAFISE", topCompany: true },
+  { name: "Contollo" },
+  { name: "Grupo Jaga" },
+  { name: "SmartLaw" },
+  { name: "Ogilvy" },
+  { name: "Target" },
+];
+
+export const LINKEDIN_URL =
+  "https://www.linkedin.com/in/gelder-jos%C3%A9-g%C3%B3mez-solorzano-790768222";
+export const EMAIL = "geldergomez04@gmail.com";
+export const WHATSAPP_URL = "https://wa.me/50581867161";
+export const GITHUB_URL = "#";
 
 export function getLangText<T extends { es: string; en: string }>(
   obj: T,

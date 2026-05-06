@@ -1,4 +1,6 @@
 import type { Lang } from "./translations";
+import coverCargotrans from "@/assets/cover-cargotrans.png";
+import coverPlaceholder from "@/assets/project-placeholder.jpg";
 
 export interface ExperienceItem {
   company: string;
@@ -8,6 +10,8 @@ export interface ExperienceItem {
   stack: string[];
   group: "companies" | "freelance";
   topCompany?: boolean;
+  cover?: string;
+  logo?: string;
 }
 
 export const experiences: ExperienceItem[] = [

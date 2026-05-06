@@ -41,6 +41,7 @@ function Index() {
         <Header />
         <main>
           <Hero />
+          <TrustBar />
           <About />
           <Experience />
           <Projects />

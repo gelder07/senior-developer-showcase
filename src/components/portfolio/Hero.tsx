@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center pt-24 lg:pt-12 2xl:pt-0 overflow-hidden "
+      className="relative min-h-screen flex items-center pt-24 2xl:py-44 lg:pt-12 2xl:pt-0 overflow-hidden "
     >
       {/* Soft amber halo */}
       <div

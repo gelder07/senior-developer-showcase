@@ -43,7 +43,7 @@ export function Stack() {
   const categories = Object.keys(stack) as (keyof typeof t.stack.categories)[];
 
   return (
-    <section id="stack" className="py-32 px-6 bg-surface/40">
+    <section id="stack" className="py-12 2xl:py-44 px-6 bg-surface/40">
       <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-5xl 2xl:max-w-7xl">
         <SectionHeading label={t.stack.label} title={t.stack.title} />
 

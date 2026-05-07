@@ -6,7 +6,7 @@ export function About() {
   const { t } = useAppState();
 
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-24 2xl:py-44 px-6">
       <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl">
         <SectionHeading label={t.about.label} title={t.about.title} />
 

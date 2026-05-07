@@ -12,7 +12,7 @@ export function Experience() {
   const exp = experiences[active];
 
   return (
-    <section id="experience" className="py-12 px-6 bg-surface/40">
+    <section id="experience" className="py-12 2xl:py-44 px-6 bg-surface/40">
       <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl">
         <SectionHeading label={t.experience.label} title={t.experience.title} />
 

@@ -67,7 +67,7 @@ export const translations = {
       label: "Contacto",
       title: "¿Tienes un proyecto en mente?",
       subtitle:
-        "Disponible para proyectos freelance y posiciones full-time remotas. Respondo en menos de 24h.",
+        "Disponible para proyectos freelance y posiciones full-time remotas o presenciales. Respondo en menos de 24h.",
       copy: "Copiar email",
       copied: "¡Copiado!",
     },

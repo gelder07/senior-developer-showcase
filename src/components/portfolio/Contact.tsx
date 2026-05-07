@@ -25,11 +25,11 @@ export function Contact() {
     },
     { href: WHATSAPP_URL, label: "WhatsApp", icon: MessageCircle, external: true },
     { href: LINKEDIN_URL, label: "LinkedIn", icon: Linkedin, external: true },
-    { href: GITHUB_URL, label: "GitHub", icon: Github, external: true },
+    // { href: GITHUB_URL, label: "GitHub", icon: Github, external: true },
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 relative overflow-hidden">
+    <section id="contact" className="py-12 2xl:py-44 px-6 relative overflow-hidden">
       <div
         aria-hidden
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-[700px] rounded-full opacity-15 blur-3xl"
@@ -40,21 +40,7 @@ export function Contact() {
       />
 
       <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl text-center relative">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mx-auto mb-8 size-32 md:size-64 rounded-full overflow-hidden border border-border ring-4 ring-primary/10 shadow-lg"
-        >
-          <img
-            src={profilePhoto}
-            alt="Gelder Gómez"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
-        </motion.div>
-
+       
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,12 +51,28 @@ export function Contact() {
           / {t.contact.label}
         </motion.p>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mx-auto mb-8 size-40 2xl:size-64 rounded-full overflow-hidden border border-border ring-4 ring-primary/10 shadow-lg"
+        >
+          <img
+            src={profilePhoto}
+            alt="Gelder Gómez"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </motion.div>
+
+
         <motion.h2
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl tracking-tight text-foreground leading-[1.05]"
+          className="font-serif text-5xl  2xl:text-7xl tracking-tight text-foreground leading-[1.05]"
         >
           {t.contact.title}
         </motion.h2>
@@ -80,7 +82,7 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto"
+          className="mt-6 text-md 2xl:text-lg text-muted-foreground max-w-md mx-auto"
         >
           {t.contact.subtitle}
         </motion.p>

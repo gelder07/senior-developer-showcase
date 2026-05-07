@@ -20,7 +20,7 @@ export function About() {
           {t.about.body}
         </motion.p>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-px bg-border rounded-2xl overflow-hidden border border-border">
           {t.about.stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -28,9 +28,9 @@ export function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-background p-8"
+              className="bg-background p-6 2xl:p-8"
             >
-              <div className="font-serif text-4xl md:text-5xl text-primary leading-none">
+              <div className="font-serif text-4xl 2xl:text-5xl text-primary leading-none">
                 {s.value}
               </div>
               <div className="mt-3 text-sm text-muted-foreground">{s.label}</div>

@@ -12,7 +12,7 @@ export function Experience() {
   const exp = experiences[active];
 
   return (
-    <section id="experience" className="py-24 px-6 bg-surface/40">
+    <section id="experience" className="py-12 px-6 bg-surface/40">
       <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl">
         <SectionHeading label={t.experience.label} title={t.experience.title} />
 
@@ -64,35 +64,38 @@ export function Experience() {
               transition={{ duration: 0.35 }}
               className="min-h-[360px]"
             >
-              {exp.cover && (
-                <div className="mb-6 overflow-hidden rounded-xl border border-border aspect-[16/9] bg-muted">
-                  <img
-                    src={exp.cover}
-                    alt={`${exp.company} cover`}
-                    loading="lazy"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              )}
+
 
               <div className="flex flex-wrap items-center gap-3 mb-2">
-                  {exp.logo && (
-                <span
-                  aria-hidden
-                  className="inline-flex items-center justify-center size-10 rounded-lg bg-card border border-border overflow-hidden shrink-0"
-                >
-                    <img
-                      src={exp.logo}
-                      alt={`${exp.company} logo`}
-                      className="w-full h-full object-contain"
-                    />
                
-                </span>
+                <h3 className=" flex flex-wrap items-center font-serif text-3xl md:text-4xl text-foreground">
+                  {exp.logo && (
+                    <span
+                      aria-hidden
+                      className="inline-flex items-center justify-center size-10 rounded-lg bg-card border border-border overflow-hidden shrink-0 mr-2"
+                    >
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="w-full h-full object-contain"
+                      />
+
+                    </span>
                   )}
-                <h3 className="font-serif text-3xl md:text-4xl text-foreground tracking-tight">
+
                   {exp.role[lang]}{" "}
                   <span className="text-primary">@ {exp.company}</span>
                 </h3>
+                {exp.cover && (
+                  <div className="overflow-hidden rounded-xl border border-border aspect-video bg-muted">
+                    <img
+                      src={exp.cover}
+                      alt={`${exp.company} cover`}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                )}
                 <div className="flex w-full">
                   {exp.topCompany && (
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
@@ -124,6 +127,8 @@ export function Experience() {
                   </span>
                 ))}
               </div>
+
+
             </motion.div>
           </AnimatePresence>
         </div>

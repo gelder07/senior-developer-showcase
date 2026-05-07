@@ -174,9 +174,9 @@ export const projects: Project[] = [
 
 export const stack: Record<string, string[]> = {
   frontend: ["React", "Next.js", "Angular", "Redux", "Zustand", "Tailwind", "Material UI"],
-  backend: ["Node.js", ".NET Core", "Laravel (PHP)", "Django (Python)"],
-  mobile: ["React Native", "Expo", "Offline-first"],
-  cloud: ["AWS Lambda", "AWS Amplify", "DigitalOcean", "Nginx", "CI/CD"],
+  backend: ["Laravel (PHP)", "Django rest framework", "Python", "Php", "NestJs"],
+  mobile: ["React Native  Expo  Native Modules"],
+  cloud: ["AWS", "DigitalOcean Ubuntu", "Nginx", "CI/CD", "Gitlab"],
   databases: ["PostgreSQL", "MySQL", "DynamoDB"],
   other: ["GraphQL", "REST APIs", "SOLID", "SCRUM", "Git"],
 };

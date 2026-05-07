@@ -10,7 +10,7 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-32 px-6">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl">
         <SectionHeading label={t.projects.label} title={t.projects.title} />
 
         <div className="grid grid-cols-1 sm:grid-cols-2  gap-6">

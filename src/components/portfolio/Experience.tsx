@@ -13,7 +13,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="py-24 px-6 bg-surface/40">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl">
         <SectionHeading label={t.experience.label} title={t.experience.title} />
 
         <div className="grid md:grid-cols-[280px_1fr] gap-10 lg:gap-16">

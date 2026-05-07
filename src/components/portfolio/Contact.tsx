@@ -39,7 +39,7 @@ export function Contact() {
         }}
       />
 
-      <div className="mx-auto max-w-5xl text-center relative">
+      <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl text-center relative">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}

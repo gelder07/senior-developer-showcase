@@ -12,7 +12,7 @@ export function TrustBar() {
       aria-label="Trusted companies"
       className="py-16 border-y border-border/60 bg-surface/30 overflow-hidden"
     >
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-4xl 2xl:max-w-7xl px-6">
         <p className="font-mono text-xl uppercase tracking-[0.25em] text-muted-foreground text-center mb-10 ">
           {t.trust.title}
         </p>

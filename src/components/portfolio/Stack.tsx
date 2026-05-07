@@ -47,7 +47,7 @@ export function Stack() {
       <div className="mx-auto max-w-2xl md:max-w-3xl lg:max-w-5xl 2xl:max-w-7xl">
         <SectionHeading label={t.stack.label} title={t.stack.title} />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
           {categories.map((cat, i) => (
             <motion.div
               key={cat}
@@ -55,7 +55,7 @@ export function Stack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="rounded-2xl border   p-6 md:p-8 "
+              className="rounded-2xl border border-primary/40 hover:border-primary/85 hover:scale-105 transition-all duration-300 p-6 md:p-8 "
             >
               <p className="text-4xl font-bold text-primary mb-6">
                 {t.stack.categories[cat]}

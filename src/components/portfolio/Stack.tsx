@@ -9,7 +9,7 @@ export function Stack() {
 
   return (
     <section id="stack" className="py-32 px-6 bg-surface/40">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <SectionHeading label={t.stack.label} title={t.stack.title} />
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

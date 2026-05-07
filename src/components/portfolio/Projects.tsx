@@ -10,10 +10,10 @@ export function Projects() {
 
   return (
     <section id="projects" className="py-32 px-6">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         <SectionHeading label={t.projects.label} title={t.projects.title} />
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-6">
           {projects.map((p, i) => {
             const isLink = Boolean(p.url);
             const Wrapper = (isLink ? "a" : "article") as "a" | "article";
@@ -44,26 +44,13 @@ export function Projects() {
                 >
                   {/* Cover image — fixed aspect for alignment */}
                   <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-                    {p.cover ? (
+                    {p.cover && (
                       <img
                         src={p.cover}
                         alt={`${p.title} cover`}
                         loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                    ) : (
-                      <div
-                        aria-hidden
-                        className="w-full h-full flex items-center justify-center"
-                        style={{
-                          background:
-                            "radial-gradient(circle at 30% 30%, color-mix(in oklab, var(--primary) 18%, transparent), transparent 60%), var(--card)",
-                        }}
-                      >
-                        <span className="font-serif text-5xl text-primary/30">
-                          {p.title.charAt(0)}
-                        </span>
-                      </div>
                     )}
                     <div className="absolute top-3 right-3">
                       {p.privateProject ? (

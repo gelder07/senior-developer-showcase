@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-24 overflow-hidden"
     >
       {/* Soft amber halo */}
       <div
@@ -28,7 +28,7 @@ export function Hero() {
         }}
       />
 
-      <div className="mx-auto max-w-6xl px-6 w-full relative">
+      <div className="mx-auto max-w-7xl px-6 w-full relative">
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-md uppercase tracking-[0.3em] text-muted-foreground flex flex-col items-center gap-2"
+        className="hidden sm:flex absolute bottom-16 left-1/2 -translate-x-1/2 font-mono text-md uppercase tracking-[0.3em] text-muted-foreground flex-col items-center gap-2"
       >
         {t.hero.scroll}
         <span className="block w-px h-8 bg-gradient-to-b from-muted-foreground to-transparent" />

@@ -12,7 +12,7 @@ export function Experience() {
   const exp = experiences[active];
 
   return (
-    <section id="experience" className="py-32 px-6 bg-surface/40">
+    <section id="experience" className="py-24 px-6 bg-surface/40">
       <div className="mx-auto max-w-7xl">
         <SectionHeading label={t.experience.label} title={t.experience.title} />
 
@@ -21,7 +21,7 @@ export function Experience() {
           <div className="md:border-l border-border">
             {(["companies", "freelance"] as const).map((group) => (
               <div key={group} className="mb-8 last:mb-0">
-                <p className="font-mono text-md uppercase tracking-[0.25em] text-muted-foreground pl-4 mb-3">
+                <p className="font-mono text-[16px] uppercase tracking-[0.25em] text-muted-foreground pl-4 mb-3">
                   {t.experience.groups[group]}
                 </p>
                 <ul>
@@ -38,7 +38,7 @@ export function Experience() {
                               : "border-transparent text-muted-foreground hover:text-foreground hover:border-border",
                           )}
                         >
-                          <span className="truncate text-md">{e.company}</span>
+                          <span className="truncate text-[14px]">{e.company}</span>
                           {e.topCompany && (
                             <span
                               className="size-1.5 rounded-full bg-primary shrink-0"
@@ -76,32 +76,31 @@ export function Experience() {
               )}
 
               <div className="flex flex-wrap items-center gap-3 mb-2">
+                  {exp.logo && (
                 <span
                   aria-hidden
                   className="inline-flex items-center justify-center size-10 rounded-lg bg-card border border-border overflow-hidden shrink-0"
                 >
-                  {exp.logo ? (
                     <img
                       src={exp.logo}
                       alt={`${exp.company} logo`}
                       className="w-full h-full object-contain"
                     />
-                  ) : (
-                    <span className="text-primary font-serif text-lg">
-                      {exp.company.replace(/^(Grupo Jaga · )/, "").charAt(0)}
-                    </span>
-                  )}
+               
                 </span>
+                  )}
                 <h3 className="font-serif text-3xl md:text-4xl text-foreground tracking-tight">
                   {exp.role[lang]}{" "}
                   <span className="text-primary">@ {exp.company}</span>
                 </h3>
-                {exp.topCompany && (
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
-                    <Award className="size-3" />
-                    {t.topCompany}
-                  </span>
-                )}
+                <div className="flex w-full">
+                  {exp.topCompany && (
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-primary/10 text-primary border border-primary/30">
+                      <Award className="size-3" />
+                      {t.topCompany}
+                    </span>
+                  )}
+                </div>
               </div>
 
               {exp.topCompany && (

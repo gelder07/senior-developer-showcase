@@ -43,7 +43,7 @@ export const translations = {
       title: "Empresas y clientes que confían en mi trabajo.",
       groups: {
         companies: "Empresas",
-        freelance: "Freelance / Clientes",
+        freelance: "Freelance",
       },
     },
     projects: {
@@ -117,7 +117,7 @@ export const translations = {
       title: "Companies and clients that trust my work.",
       groups: {
         companies: "Companies",
-        freelance: "Freelance / Clients",
+        freelance: "Freelance",
       },
     },
     projects: {

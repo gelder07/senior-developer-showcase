@@ -6,8 +6,8 @@ export function About() {
   const { t } = useAppState();
 
   return (
-    <section id="about" className="py-32 px-6">
-      <div className="mx-auto max-w-6xl">
+    <section id="about" className="py-24 px-6">
+      <div className="mx-auto max-w-7xl">
         <SectionHeading label={t.about.label} title={t.about.title} />
 
         <motion.p

@@ -8,7 +8,7 @@ export function SectionHeading({
   title: string;
 }) {
   return (
-    <div className="mb-16">
+    <div className="mb-10">
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
